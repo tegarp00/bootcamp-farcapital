@@ -442,6 +442,10 @@ footer {
     background: black;
 }
 
+footer .left {
+    margin-left: 60px;
+}
+
 footer .content {
     display: flex;  
 }
