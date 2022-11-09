@@ -1,0 +1,457 @@
+body{
+    margin: 0;
+    background: #edf2fb;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Start */
+.navbar{
+    width: 1024;
+    height: auto;
+    padding: 15px 0px;
+}
+.header{
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header ul{
+    display: flex;
+}
+
+.header li{
+    list-style: none;
+    margin: 6px 5px;
+}
+
+.signUp {
+    background: black;
+    padding: 7px;
+    border: 2px;
+    border-radius: 4px;
+    color: white;
+}
+
+/* .active a:link, a:visited {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px
+} */
+
+a:link, a:visited {
+    color: black;
+    margin: 0px 10px; 
+    text-decoration: none;
+}
+
+/* Navbar End */
+
+.container{
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Landing Page */
+.landing{
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+.button-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-flex .isi img{
+    height: 50px;
+    width: 130px;
+    object-fit: cover;
+}
+
+.landing p{
+    font-weight: 900;
+    font-size: 60px;
+    line-height:10px;
+    margin: 35px 15px ;
+}
+
+.landing .content span{
+    margin-left: 15px;
+}
+
+.profile{
+    width: 600px;
+    object-fit: cover;
+    /* filter: drop-shadow(19px 0px 0px white) drop-shadow(19px 0px 0px orange) drop-shadow(19px 0px 0px blue) drop-shadow(19px 0px 0px yellow); */
+}
+
+.landing .box-orange{
+    margin: 0px;
+    background: orange;
+    padding: 1px 1px;
+    transform: rotate(-2deg);
+}
+
+.landing .text-orange{
+    transform: rotate(2deg);
+}
+
+.landing .bg-white{
+    margin: 0px;
+    margin-top: 60px;
+    background: white;
+    padding: 35px 20px;
+    transform: rotate(-1deg);
+}
+
+/* New Arrival */
+
+#new-arrival{
+    padding: 100px;
+    background: white;
+}
+
+#new-arrival .container p{
+    margin-left: 15px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.arrival{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.arrival .content{
+    padding: 0px;
+    margin: 0px 15px;
+    width: calc((100%/3) - 30px);
+}
+
+.arrival .content img{
+    background: #edf2fb;
+    width: 100%;
+    object-fit: cover;
+}
+
+#new-arrival .container .arrival .content p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container .col{
+    width: calc((100%/7) - 10px);
+    padding: 5px;
+    float: left;
+}
+
+.container .col .box {
+    background-color: white;
+}
+
+.container .col .box img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 89%;
+    -webkit-filter: drop-shadow(0px 0px 0px #222);
+    filter: drop-shadow(9px 0px 0px #222);
+}
+
+.shadow{
+    -webkit-filter: drop-shadow(0px 0px 0px #222);
+    filter: drop-shadow(19px 0px 0px #222);
+}
+
+.col:nth-child(even) .box {
+    background: purple;
+}
+
+.saleNow {
+    background: orange;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10%;
+}
+
+/* .container .saleNow .contentPayday {
+    line-height: 10px;
+    font-size: 60px;
+    font-weight: 900;
+} */
+
+.container .saleNow .contentPayday p {
+    line-height: 10px;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.payday {
+    background: white;
+    padding: 35px;
+    transform: rotate(-3deg);
+}
+
+.tglPayday {
+    font-weight: 700;
+}
+
+.shopNow {
+    background: black;
+    font-weight: 700;
+    padding: 15px;
+    color: white;
+    border: 2px;
+    border-radius: 3px;
+}
+
+#section-item h1 {
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+#section-item {
+    padding: 50px;
+}
+
+#section-item .hoodie {
+    width: 100%;
+    background: rgb(173, 151, 109);
+}
+
+#section-item .item {
+    width: calc((100%/3) - 50px);
+    margin: 0 10px;
+}
+
+#section-item .desc {
+    display: flex;
+}
+
+#section-item .item-card {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+#section-item .container .item-card .item .title {
+    font-weight: 80;
+    margin: 15px 0;
+}
+
+#section-item p {
+    font-size: 15px;
+    font-weight: 50;
+}
+
+#section-item .badge {
+    line-height: 2px;
+    font-size: 12px;
+}
+
+#section-item .container .item-card .item .desc {
+    padding-left: 70px;
+}
+
+#section-available-store .container .content{
+    align-items: center;
+    padding: 40px;
+    display: flex;
+}
+
+#section-available-store .content .left {
+    width: 40%;
+}
+
+#section-available-store .content .right {
+    width: 60%;
+}
+
+#section-available-store .content .left h1 {
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#section-available-store .content .left p {
+    font-size: 15px;
+    font-weight: 30px;
+    opacity: 60%;
+}
+
+#section-available-store .button-viewAll {
+    font-weight: 700;
+    padding: 16px;
+    width: 130px;
+    border: 2px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+}
+
+#section-available-store .content .icon-all .icon {
+    width: 120px;
+    margin: 30px;
+}
+
+#section-available-store .content .icon-all img {
+    width: 120px;
+    height: 120px;
+}
+
+#section-favorite-apparel .container {
+    padding: 60px;
+}
+
+#section-favorite-apparel .container .item-card {
+    padding: 40px;
+}
+
+#section-favorite-apparel .item-card .item .favorite-1 {
+    width: 400px;
+    height: 306px;
+    background: rgb(202, 228, 226);
+}
+
+#section-favorite-apparel .item-card .item .favorite-2 {
+    width: 400px;
+    height: 306px;
+    background: rgb(202, 228, 226);
+}
+
+#section-favorite-apparel .item-card {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+#section-favorite-apparel .item-card .item .title {
+    font-weight: 80;
+    margin: 15px 0;
+}
+
+#section-favorite-apparel p {
+    font-size: 15px;
+    font-weight: 50;
+}
+
+#section-favorite-apparel .badge {
+    line-height: 2px;
+    font-size: 12px;
+}
+
+#section-favorite-apparel .right {
+    width: 30px;
+}
+
+#section-favorite-apparel .desc {
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+}
+
+#section-favorite-apparel .desc .right {
+    padding-right: 15px;
+    opacity: 60%;
+}
+
+#section-favorite-apparel .left .title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#section-favorite-apparel .left .badge{
+    font-size: 14px;
+    opacity: 60%;
+}
+
+#section-downloads {
+    padding: 60px;
+}
+
+#section-downloads .desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#section-downloads .button-downloads {
+    display: flex;
+    width: 20px;
+}
+
+#section-downloads .container .content .desc .descr {
+    padding-left: 8px;
+}
+
+#section-addemail {
+    color: white;
+    padding: 80px;
+    text-align: center;
+    background: orange;
+}
+
+#section-addemail .noted p {
+    font-size: 16px;
+}
+
+#section-addemail .desc {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#section-addemail .add-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-addemail .input-text {
+    width: 350px;
+    padding: 18px;
+    border: 2px;
+    border-radius: 4px;
+}
+
+#section-addemail .button-signup {
+    width: 90px;
+    height: 40px;
+    margin-left: -96px;
+    background: black;
+    color: white;
+    border: 2px;
+    border-radius: 3px;
+}
+
+footer {
+    padding: 50px;
+    color: white;
+    background: black;
+}
+
+footer .content {
+    display: flex;  
+}
+
+footer .right {
+    margin-top: 6px;
+    margin-left: 260px;
+    display: flex;
+}
+
+footer .quick-link {
+    margin-left: 120px;
+}
