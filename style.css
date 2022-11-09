@@ -455,3 +455,55 @@ footer .right {
 footer .quick-link {
     margin-left: 120px;
 }
+
+footer .legal {
+    margin-left: 120px;
+}
+
+footer .legal .logomedia {
+    padding-top: 24px;
+}
+
+footer .legal .logomedia {
+    display: flex;
+}
+
+.testmargin {
+    display: flex;
+}
+
+.svg {
+    margin: 5px;
+    border: 2px;
+    border-radius: 12px;
+    width: 36px;
+    height: 32px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background: orange;
+}
+
+.fb {
+    /* display: flex; */
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 14px;
+}
+
+.ig {
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 14px;
+}
+
+.twitter {
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 14px;
+}
+
+.in {
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 14px;
+}
