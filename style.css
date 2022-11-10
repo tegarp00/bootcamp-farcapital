@@ -80,11 +80,23 @@ a:link, a:visited {
     object-fit: cover;
 }
 
+.container .landing {
+    display: flex;
+}
+
 .landing p{
     font-weight: 900;
     font-size: 60px;
     line-height:10px;
     margin: 35px 15px ;
+}
+
+.landing .content {
+    margin-left: 100px;
+}
+
+.imgp {
+    margin-right: 100px;
 }
 
 .landing .content span{
@@ -95,6 +107,10 @@ a:link, a:visited {
     width: 600px;
     object-fit: cover;
     /* filter: drop-shadow(19px 0px 0px white) drop-shadow(19px 0px 0px orange) drop-shadow(19px 0px 0px blue) drop-shadow(19px 0px 0px yellow); */
+}
+
+#section-landing {
+    display: flex;
 }
 
 .landing .box-orange{
@@ -180,11 +196,28 @@ a:link, a:visited {
     background: purple;
 }
 
-.saleNow {
+.contentPayday {
+    padding: 70px;
+    margin-left: 580px;
+    margin-bottom: 20px;
+}
+
+#section-sale {
     background: orange;
+}
+
+#section-sale .item img{
+    margin-bottom: 0;
+    margin-left: -1200px;
+    width: 700px;
+    height: 100%;
+}
+
+.saleNow {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0px 10%;
+    /* background: orange; */
+    /* flex-wrap: wrap; */
+    /* padding: 0px 10%; */
 }
 
 /* .container .saleNow .contentPayday {
