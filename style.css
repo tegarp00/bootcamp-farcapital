@@ -150,6 +150,11 @@ a:link, a:visited {
     flex-wrap: wrap;
 }
 
+.arrival img {
+    object-fit: cover;
+    height: 500px;
+}
+
 .arrival .content{
     padding: 0px;
     margin: 0px 15px;
@@ -210,7 +215,7 @@ a:link, a:visited {
     margin-bottom: 0;
     margin-left: -1200px;
     width: 700px;
-    height: 100%;
+    height: 100%    ;
 }
 
 .saleNow {
