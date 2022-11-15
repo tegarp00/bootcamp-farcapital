@@ -9,10 +9,9 @@ module.exports = {
         xl: '1170px',
       }
     },
-    extend: {
-        colors: {
-        red: '#da373d',
-        }
+    colors: {
+    blue: '#217BF4',
+    red: '#da373d',
     },
 		fontFamily: {
 			//body: ['Inter']

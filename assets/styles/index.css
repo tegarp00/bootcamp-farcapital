@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 
+#header {
+  margin-bottom: 36px;
+  border-bottom: 1px solid #E5E5E5;
+}
 
 #header input {
   font-family: 'Inter';
@@ -38,3 +42,34 @@ color: #FFFFFF;
   outline: none;
 }
 
+#iamge {
+  background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
+}
+
+#iamge .ncommunity-buttom a {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  color: #217BF4;
+}
+
+#what-netboks ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#what-netboks ul li::before {
+  content: " ";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('/assets/images/icons/eclipe-10.svg');
+  margin-right: 12px;
+  background-repeat: no-repeat;
+}
