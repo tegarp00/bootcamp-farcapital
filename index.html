@@ -5,310 +5,499 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Slicing Netbook using Tailwind</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link href="assets/styles/tailwind.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="poppins">
-    <section>
-        <div class="navbar">
-            <div class="header">
-                <h1>RONDOVISION</h1>
+<body>
+
+    <nav id="header" class="border-b-2 lg:absolute fixed w-full lg:bg-transparent bg-white">
+        <div class="container flex lg:flex-nowrap flex-wrap justify-between py-6 lg:px-0 px-4 gap-5">
+            <div class="img-box flex items-center mr-[72px]">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+
+            <!-- Button Hamburger -->
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+            <div id="navbar-default" class="hidden lg:block lg:bg-transparent lg:py-0 py-5 bg-white w-full">
+                <div class="flex md:flex-row flex-col lg:items-center items-start justify-between lg:p-0 p-5">
+                    <!-- Left -->
+                    <div class=" menu-navigation flex gap-[70px]">
+                        <ul class="flex md:flex-row flex-col lg:items-center items-start lg:gap-8 gap-4">
+                            <li><a href=" #" class="active">Home</a></li>
+                            <li>
+                                <div class="item-dropdown flex gap-[5px]">
+                                    <a href="#" class="mt-1">Community</a>
+                                    <img src="assets/icon/dropdown.svg" alt="dropdown">
+                                </div>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Event</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right -->
+                    <div class="menu-action flex md:flex-row items-center gap-[42px]">
+                        <div class="search-box flex border-b-2 py-2 lg:mt-0 mt-1">
+                            <img src="assets/icon/search.svg" alt="search" class="w-1/2">
+                            <form action="">
+                                <input type="text"
+                                    class="focus:outline-non focus:ring-0 p-2 border-0 w-28 bg-transparent"
+                                    placeholder="search here... ">
+                            </form>
+                        </div>
+                        <div class="button-box">
+                            <button class="bg-blue hover:bg-red-400 text-white py-4 px-11 rounded-2xl drop-shadow-xl">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container flex lg:flex-row flex-col items-center lg:px-0 px-4">
+            <div class="lg:w-1/2 w-full lg:mt-0 mt-5">
+                <span class="bg-blue bg-opacity-10 text-blue badge py-3 px-8 rounded-xl">Netbook Community</span>
+                <h1 class="font-bold lg:text-6xl text-4xl mt-5 text-darkblue">Your Solutions For Community!</h1>
+                <p class="text-lg mt-5 text-grey">More than 2 billion people in over countries use socibook to
+                    stay in touch with
+                    friends & family.</p>
+                <div class="button-box flex lg:justify-start justify-center mt-11">
+                    <button
+                        class="text-blue border-2 border-blue lg:py-4 py-2 lg:px-11 px-5 rounded-2xl mr-5 transition hover:text-white hover:bg-blue hover:-translate-y-1 hover:scale-110 hover:shadow-xl duration-150">About
+                        More</button>
+                    <button
+                        class="text-blue border-2 border-blue lg:py-4 py-2 lg:px-11 px-5 rounded-2xl mr-5 transition hover:text-white hover:bg-blue hover:-translate-y-1 hover:scale-110 hover:shadow-xl duration-150">Invite
+                        Friend</button>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full lg:mt-0 mt-10">
+                <img src="/assets/img/landing.png" alt="landing"
+                    class="lg:w-full w-80 lg:mr-0 mr-20 object-cover">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="why" class="pb-[34px]">
+        <div class="container flex lg:flex-row flex-col items-center lg:mt-32 mt-20 lg:px-0 px-4">
+            <div class="lg:w-1/2 w-full lg:mb-0 mb-8 lg:pr-44">
+                <p class="text-blue font-medium text-lg mb-[10px]">Whats Netbook?</p>
+                <h2 class="text-darkblue text-4xl font-bold mb-6">
+                    Why Join to Netbook Social Network?
+                </h2>
+                <p class="text-grey font-normal text-base mb-8">
+                    Recent surveys have indicated that small businesses recognise the need they have to connect with
+                    consumer.
+                </p>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">BEST SELLER</a></li>
-                    <li><a href="#">ALL UNDER $30</a></li>
-                    <li><a href="#">REVIEWS</a></li>
-                    <li>
-                        <button class="signUp">SIGN UP</button>
-                    </li>
+                    <li>Group</li>
+                    <li>Messages</li>
+                    <li>Share</li>
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <section id="section-landing">
-        <div class="container">
-            <div class="landing">
-                <div class="content">
-                    <p class="bg-white">CLASSIC</p>
-                    <p>WITH</p>
-                    <div class="box-orange">
-                        <p class="text-orange">NATURAL</p>
-                    </div>
-                    <p>TWIST.</p>
-                    <br>
-                    <span>Find your cassic style now</span>
-                    <br>
-
-                    <div class="button-flex">
-                        <div class="isi">
-                            <img src="appstore.png" alt="app">
-                        </div>
-                        <div class="isi">
-                            <img src="googleplay.png" alt="app">
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="content">
-                    <img src="men.png" alt="" class="profiles">
-                </div> -->
-            </div>
-        </div>
-        <div class="imgp">
-            <img src="/men.png" alt="">
-        </div>
-    </section>
-
-    <section id="new-arrival">
-        <div class="container">
-            <p>2021 NEW ARRIVALS</p>
-            <div class="arrival">
-                <div class="content">
-                    <img src="hoodie-1.png" alt="">
-                    <p>Hoodie & Sweetshirt</p>
-                    <span>Buy Now!</span>
-                    <span></span>
-                </div>
-                <div class="content">
-                    <img src="coast.png" alt="">
-                    <p>Coats & Parkas</p>
-                    <span>Buy Now!</span>
-                </div>
-                <div class="content">
-                    <img src="men.png" alt="">
-                    <p>Tees & T-Shirt</p>
-                    <span>Buy Now!</span>
+            <div class="lg:w-1/2 w-full flex lg:flex-row flex-col items-center justify-end gap-7">
+                <img src="/assets/img/why1.png" alt="why1"
+                    class="sm:w-auto w-full transition hover:-translate-y-1 hover:scale-110 duration-300 lg:mb-0 mb-8">
+                <div class="lg:w-auto w-full flex flex-col gap-8">
+                    <img src="/assets/img/why2.png" alt="why2"
+                        class="w-full transition hover:-translate-y-1 hover:scale-110 duration-300">
+                    <img src="/assets/img/why3.png" alt="why3"
+                        class="w-full transition hover:-translate-y-1 hover:scale-110 duration-300">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="section-sale">
-        <div class="container">
-            <div class="saleNow">
-                <div class="contentPayday">
-                    <p class="payday">PAYDAY</p>
-                    <p>SALE NOW</p>
-                    <span class="descPayday">
-                        Spend minimal $100 get 30% off<br>
-                        voucher code for your next purchase
-                    </span><br>
-                    <span class="tglPayday"><br>
-                        1 June - 10 June 2022<br>
-                    </span>
-                    <span>*Term & Conditions apply</span><br><br>
-                    <button class="shopNow">SHOP NOW</button>
+    <!-- Section Achievement -->
+    <section id="achievement" class="py-[75px]">
+        <div class="container flex lg:flex-row lg:gap-0 gap-[24px] flex-col-reverse items-center">
+
+            <!-- Content 1 -->
+            <div class="lg:w-8/12 w-full flex lg:flex-row flex-col gap-[24px] lg:px-0 px-4">
+                <!-- Card 1 -->
+                <div
+                    class="card lg:w-[336px] w-full transition duration-150 hover:shadow-2xl hover:-translate-y-1 border p-[44px] rounded-xl">
+                    <div class="flex gap-[13px]">
+                        <img src="/assets/icon/Star.svg" alt="Star">
+                        <p class="text-darkblue font-medium text-xl">4.8 Rating</p>
+                    </div>
+                    <div class="flex">
+                        <div class="">
+                            <img src="assets/img/profpic1.png" alt="propil" class="absolute -ml-4 mt-7">
+                            <img src="assets/img/profpic2.png" alt="propil" class="absolute z-10 mt-7">
+                            <img src="/assets/img/profpic3.png" alt="propil" class="absolute z-20 ml-4 mt-7">
+                        </div>
+                        <div>
+                            <p class="mt-[39px] font-medium text-base ml-[76px]"><span class="text-blue">+836k</span>
+                                Members</p>
+                        </div>
+                    </div>
+                    <p class="mt-[43px] mb-[40px] text-base text-lightgrey font-normal">More than 2 billion we people
+                        over
+                        countries use
+                        socibooks we to stay
+                        in touch
+                        with friends.</p>
+                    <a href="#" class="text-blue font-medium text-base flex">
+                        Join Our Community
+                        <span class="mt-2 ml-[8px]">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5625 4H8.4375" stroke="#217BF4" stroke-width="1.2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.625 1.1875L8.4375 4L5.625 6.8125" stroke="#217BF4" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </span>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="/sale.png" alt="">
+
+                <!-- Card 2 -->
+                <div
+                    class="card bg-white lg:w-[336px] w-full transition duration-150 hover:shadow-2xl hover:-translate-y-1 border p-[44px] rounded-xl">
+                    <div class="flex gap-[13px]">
+                        <img src="/assets/icon/Trophy.svg" alt="Trophy">
+                        <p class="text-darkblue font-medium text-xl">Awwward</p>
+                    </div>
+                    <div class="flex">
+                        <img src="/assets/img/profpic-git.svg" alt="profpic-github" class="mt-[30px] -ml-3 object-cover">
+                        <p class="mt-[39px] font-medium text-base">Best of <span class="text-blue">2021</span> On Github
+                        </p>
+                    </div>
+                    <p class="mt-[30px] mb-[40px] text-base text-lightgrey font-normal">More than 2 billion we people
+                        over countries use socibooks we to stay in touch with friends.</p>
+                    <a href="#" class="text-dark font-medium text-base flex">
+                        Go To Awards
+                        <span class="mt-2 ml-[8px]">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5625 4H8.4375" stroke="#4A4A56" stroke-width="1.2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.625 1.1875L8.4375 4L5.625 6.8125" stroke="#4A4A56" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Content 2 -->
+            <div class="lg:w-4/12 w-full lg:px-0 px-4">
+                <p class="text-blue font-medium text-lg">Our Achievement</p>
+                <h3 class="text-darkblue text-4xl font-bold mt-[10px]">We are Connecting You The Digital Life.</h3>
+                <p class="mt-[18px] mb-[38px] text-base text-lightgrey font-normal">The scope the Social Media becomes
+                    crucial Is helps the business to directly engage with their needs
+                    and wants.</p>
+
+                <button
+                    class="bg-blue py-[22px] px-[38px] text-white font-medium text-sm rounded-[14px] transition hover:-translate-y-1 hover:scale-110 duration-150">
+                    <div class="flex gap-[29px]">Discover
+                        Me <img src="/assets/icon/arrow-right-white.svg" alt="arrow-right-white"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Comunity -->
+    <section id="community">
+        <div class="container flex flex-col justify-center">
+            <!-- Title Section -->
+            <div class="text-center">
+                <p class="text-blue font-medium text-lg">
+                    Our Community
+                </p>
+                <h3 class="text-darkblue font-bold text-4xl mt-[9px]">
+                    Community Main Feature
+                </h3>
+                <p class="text-grey font-nomal text-base mt-[19px] lg:mx-[380px]">
+                    The wise man therefore always holds in these matters to this principle of selection.
+                </p>
+            </div>
+
+            <div class="flex lg:flex-row flex-col justify-center gap-[44px] mt-[64px] lg:px-0 px-4">
+                <div class="flex flex-col gap-y-[44px]">
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/member.png" alt="member">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Members, Friends</h6>
+                            <p class="text-grey text-lg font-normal">Members, Friends Connection ( like followers ),
+                                Private Message</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/forum.png" alt="forum">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Forum</h6>
+                            <p class="text-grey text-lg font-normal">Forum is ready by BBPress. Your users can make
+                                topics and talk.</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/list-builder.png" alt="list">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">List Builder</h6>
+                            <p class="text-grey text-lg font-normal">Members, Groups list can be modified by drag & drop
+                                live builder.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-[44px]">
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/groups.png" alt="groups">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Groups</h6>
+                            <p class="text-grey text-lg font-normal">Your users can create groups to let other users to
+                                join and talk</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/module.png" alt="module">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Custom Modul</h6>
+                            <p class="text-grey text-lg font-normal">You can create Members, Groups Module. We already
+                                created 3 modules. It's by drag & drop
+                                live
+                                builder.</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="/assets/icon/list-scroll.png" alt="list">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">List Scroll Effects</h6>
+                            <p class="text-grey text-lg font-normal">8 different scroll effects are ready.
+                                You can always change by your tastes.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- <section id="section-item">
-        <div class="container">
-            <h1>2021 New Arrivals</h1>
-            <div class="item-card">
-                <div class="item">
-                    <img class="hoodie" src="/sale.png" alt="">
-                    <div class="desc">
-                        <div class="left">
-                            <h3 class="title">Hoodie & Sweetshirt</h3>
-                            <p class="badge">Buy Now!</p>
-                        </div>
-                        <div class="right">
-                            <img class="arrow" src="/arrow-right.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="hoodie" src="/sale.png" alt="">
-                    <div class="desc">
-                        <h3 class="title">Hoodie & Sweetshirt</h3>
-                        <p class="badge">Buy Now!</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="hoodie" src="/sale.png" alt="">
-                    <div class="desc">
-                        <h3 class="title">Hoodie & Sweetshirt</h3>
-                        <p class="badge">Buy Now!</p>
+    <!-- Section Member -->
+    <section id="member" class="py-[80px]">
+        <div class="container lg:px-0 px-4">
+            <!-- Title Section -->
+            <div class="text-center">
+                <p class="text-blue font-medium text-lg">
+                    Valuable Team
+                </p>
+                <h3 class="text-darkblue font-bold text-4xl mt-[9px]">
+                    Our Active Members
+                </h3>
+                <p class="text-grey font-nomal text-base mt-[19px] lg:mx-[380px]">
+                    when an unknown printer took a galley of type and meeting fari scrambled it.
+                </p>
+                <div class="flex justify-center mt-[38px] mb-[44px]">
+                    <div class="bg-blue/10 p-2 rounded-[14px]">
+                        <button
+                            class="text-darkblue2 lg:py-[20px] py-[10px] lg:px-[50px] px-[20px] rounded-[14px] font-medium text-base transition hover:shadow-xl hover:font-semibold hover:text-white hover:bg-blue duration-150">Newst</button>
+                        <button
+                            class="text-darkblue2 lg:py-[20px] py-[10px] lg:px-[50px] px-[20px] rounded-[14px] font-medium text-base transition hover:shadow-xl hover:font-semibold hover:text-white hover:bg-blue duration-150">Popular</button>
+                        <button
+                            class="text-darkblue2 lg:py-[20px] py-[10px] lg:px-[50px] px-[20px] rounded-[14px] font-medium text-base transition hover:shadow-xl hover:font-semibold hover:text-white hover:bg-blue duration-150">Active</button>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </section> -->
 
-    <section id="section-available-store">
-        <div class="container">
-            <div class="content">
-                <div class="left">
-                    <h1>We Available on<br>other store</h1>
-                    <p>Now you can find our product on the<br>
-                    other store with the same price.
-                    </p>
-                    <button class="button-viewAll">View All</button>
+            <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[30px]">
+                <div
+                    class="card flex flex-col items-center border rounded-lg bg-white py-[30px] px-[52px] transition hover:shadow-xl hover:border-0 duration-150">
+                    <img src="assets/img/propil1.png" alt="propil">
+                    <p class="font-semibold text-2xl mt-[29px] mb-[10px]">Fahim Rahman</p>
+                    <span>@rahman</span>
                 </div>
-                <div class="right">
-                    <div class="icon-all">
-                        <img class="icon" src="/sopi-logo.png" alt="">
-                        <img class="icon" src="/hm-logo.png" alt="">
-                        <img class="icon" src="/obey-logo.png" alt="">
-                    </div>
-                    <div class="icon-all">
-                        <img class="icon" src="/amazon-logo.png" alt="">
-                        <img class="icon" src="/lacoste-logo.png" alt="">
-                        <img class="icon" src="/levis-logo.png" alt="">
-                    </div>
+                <div
+                    class="card flex flex-col items-center border rounded-lg bg-white py-[30px] px-[52px] transition hover:shadow-xl hover:border-0 duration-150">
+                    <img src="assets/img/propil1.png" alt="propil">
+                    <p class="font-semibold text-2xl mt-[29px] mb-[10px]">Kazi Rahman</p>
+                    <span>@kazi</span>
+                </div>
+                <div
+                    class="card flex flex-col items-center border rounded-lg bg-white py-[30px] px-[52px] transition hover:shadow-xl hover:border-0 duration-150">
+                    <img src="assets/img/propil1.png" alt="propil">
+                    <p class="font-semibold text-2xl mt-[29px] mb-[10px]">Masterero Ali</p>
+                    <span>@master</span>
+                </div>
+                <div
+                    class="card flex flex-col items-center border rounded-lg bg-white py-[30px] px-[52px] transition hover:shadow-xl hover:border-0 duration-150">
+                    <img src="assets/img/propil1.png" alt="propil">
+                    <p class="font-semibold text-2xl mt-[29px] mb-[10px]">Alia Karon</p>
+                    <span>@karon</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="section-favorite-apparel">
-        <div class="container">
-            <h1>Young's Favorite Apparel</h1>
-            <div class="item-card">
-                <div class="item">
-                        <img class="favorite-1" src="/favorite-1.png" alt="">
-                    <div class="desc">
-                        <div class="left">
-                            <h3 class="title">Tranding on Instagram</h3>
-                            <p class="badge">Buy Now!</p>
-                        </div>
-                        <div class="right">
-                            <img class="arrow" src="/arrow-right.svg" alt="">
-                        </div>
-                    </div>
+    <section id="download" class="bg-[#E5F0FD]">
+        <div class="container flex lg:flex-row flex-col items-end lg:px-0 px-4">
+            <div class="lg:w-1/2 w-full lg:pb-[122px] pb-0 pt-[122px] lg:pr-60 pr-0">
+                <p class="text-blue text-lg font-normal">
+                    Get Our Aplication
+                </p>
+                <h5 class="text-darkblue text-4xl font-bold">
+                    You Can Easily Find This App…!
+                </h5>
+                <p class="text-base mt-5 text-grey">
+                    I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh
+                    loo brilliant.
+                </p>
+                <div class="flex lg:-ml-5">
+                    <img src="assets/img/appstore.png" alt="appstore" class="">
+                    <img src="assets/img/playstore.png" alt="googleplay" class="py-5">
                 </div>
-                <div class="item">
-                    <img class="favorite-2" src="/favorite-2.png" alt="">
-                <div class="desc">
-                    <div class="left">
-                        <h1 class="title">All Under $40</h1>
-                        <p class="badge">Buy Now!</p>
-                    </div>
-                    <div class="right">
-                        <img src="/arrow-right.svg" alt="">
-                    </div>
-                </div>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <img src="assets/img/phone.png" alt="phone">
             </div>
         </div>
     </section>
 
-    <section id="section-downloads">
-        <div class="container">
-            <div class="content">
-                <div class="desc">
-                    <div class="left">
-                        <div class="descr">
-                            <h1 class="title">Download app &<br>
-                                get the voucher
-                            </h1>
-                            <p class="badge">
-                                Get 30% off for first transaction using<br>
-                                Rondovision mobile app for now.
-                            </p>
-                        </div>
-                        <div class="button-flex">
-                            <div class="isi">
-                                <img src="appstore.png" alt="app">
+    <section id="news" class="py-[130px]">
+        <div class="container lg:px-0 px-4">
+            <div class="text-center">
+                <p class="text-blue font-medium text-lg">
+                    Get Our Aplication
+                </p>
+                <h3 class="text-darkblue font-bold text-4xl mt-[9px] mb-[80px]">
+                    Latest News
+                </h3>
+                <div class="flex lg:flex-row flex-col lg:justify-between gap-8">
+                    <div class="card">
+                        <img src="/assets/img/news1.png" alt="news">
+                        <div class="flex items-start gap-[14px] px-3 mt-[25px]">
+                            <img src="assets/icon/line-yellow.svg" alt="line" class="mt-3">
+                            <div class="desc text-left">
+                                <p class="font-semibold text-xl text-darkblue2 mb-[24px]">It Does Not Matter Hows Slowly
+                                    go as
+                                    Long</p>
+                                <a href="#">Continue Reading</a>
                             </div>
-                            <div class="isi">
-                                <img src="googleplay.png" alt="app">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/news2.png" alt="news">
+                        <div class="flex items-start gap-[14px] px-3 mt-[25px]">
+                            <img src="assets/icon/line-yellow.svg" alt="line" class="mt-3">
+                            <div class="desc text-left">
+                                <p class="font-semibold text-xl text-darkblue2 mb-[24px]">It Does Not Matter Hows Slowly
+                                    go as
+                                    Long</p>
+                                <a href="#">Continue Reading</a>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <img src="/mobile-poto.png" alt="">
+                    <div class="card">
+                        <img src="assets/img/news3.png" alt="news">
+                        <div class="flex items-start gap-[14px] px-3 mt-[25px]">
+                            <img src="assets/icon/line-yellow.svg" alt="line" class="mt-3">
+                            <div class="desc text-left">
+                                <p class="font-semibold text-xl text-darkblue2 mb-[24px]">It Does Not Matter Hows Slowly
+                                    go as
+                                    Long</p>
+                                <a href="#">Continue Reading</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="section-addemail">
-        <div class="desc">
-            <h1>join Rondovision community<br>
-                To Get Monthly promo
-            </h1>
-        </div>
 
-        <div class="noted">
-            <p>Type your email down bellow and be young wild generation</p>
-        </div>
-
-        <div class="untuk-flex">
-            <div class="add-email">
-                <input class="input-text" type="text" placeholder="Add your email here" name="email">
-                <button class="button-signup">Sign Up</button>
+    <footer class="bg-[#2B2B39] text-white pt-[78px]" id="footer">
+        <div class="container flex lg:flex-row flex-col mb-[85px] lg:px-0 px-8 gap-10">
+            <div
+                class="lg:w-9/12 w-full flex lg:flex-no-wrap flex-wrap lg:justify-between justify-start lg:pr-[163px] lg:gap-0 gap-20">
+                <div class="home lg:mr-0 mr-4">
+                    <p class="mb-[22px] text-xl">Home</p>
+                    <ul>
+                        <li>Home</li>
+                        <li>Community</li>
+                        <li>Events</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="resources">
+                    <p class="mb-[22px] text-xl">Resources</p>
+                    <ul>
+                        <li>Blog</li>
+                        <li>News</li>
+                        <li>Guides</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
+                <div class="community">
+                    <p class="mb-[22px] text-xl">Community</p>
+                    <ul>
+                        <li>NewsFeed</li>
+                        <li>Profile</li>
+                        <li>Friends</li>
+                        <li>Forums</li>
+                    </ul>
+                </div>
+                <div class="main-link">
+                    <p class="mb-[22px] text-xl">Main Link</p>
+                    <ul>
+                        <li>Members</li>
+                        <li>Activity</li>
+                        <li>Groups</li>
+                        <li>Private Group</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:w-3/12 w-full">
+                <p class="text-xl lg:mr-[130px] mb-[18px]">
+                    Subscribe Cirkle Newsletter
+                </p>
+                <span class="font-normal text-base text-[#E7E7E7]">
+                    Subscribe to be the first one to know about updates. Enter your email
+                </span>
+                <form action="" class="flex w-full mt-[32px]">
+                    <input type="text" placeholder="Email Address"
+                        class="bg-transparent rounded-l-[12px] border-2 px-[24px] border-white text-base font-medium lg:w-80 w-60">
+                    <button href="www.google.com" type=""
+                        class="bg-white hover:bg-red-400 py-[16px] px-[24px] -ml-14 text-[#2B2B39] rounded-[12px] text-base font-medium">Subscribe</button>
+                </form>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="detail">
-            <div class="content">
-                <div class="left">
-                    <h1>RONDOVISION</h1>
-                    <p>128 Market St.<br>
-                    20193 San Fransisco<br>
-                    California Suite #201
-                    </p>
-                </div>
-                <div class="right">
-                    <div class="company">
-                        <h4>Company</h4>
-                        <p>About</p>
-                        <p>Contact US</p>
-                        <p>Support</p>
-                        <p>Careers</p>
-                    </div>
-                    <div class="quick-link">
-                        <h4>Quick Link</h4>
-                        <p>Share Location</p>
-                        <p>Orders Tracking</p>
-                        <p>Size Guide</p>
-                        <p>FAQs</p>
-                    </div>
-                    <div class="legal">
-                        <h4>Legal</h4>
-                        <p>Terms & conditions</p>
-                        <p>Privacy Policy</p>
-                        <div class="logomedia">
-                            <div class="testmargin">
-                                <div class="svg">
-                                    <img class="fb" src="/fb-logo.svg" alt="">
-                                </div>
-                                <div class="svg">
-                                    <img class="ig" src="/ig-logo.svg" alt="">
-                                </div>
-                                <div class="svg">
-                                    <img class="twitter" src="/twitter-logo.svg" alt="">
-                                </div>
-                                <div class="svg">
-                                    <img class="in" src="/in-logo.svg" alt="">
-                                </div>
-                            </div>
-                                <!-- <img class="fb" src="/fb-logo.svg" alt="">
-                                <img class="fb" src="/fb-logo.svg" alt="">
-                                <img class="fb" src="/fb-logo.svg" alt=""> -->
-                        </div>
-                    </div>
+        <div class="bottom bg-[#20202D] py-[31px]">
+            <div
+                class="container flex lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center lg:gap-0 gap-8 lg:px-0 px-4">
+                <p>Besnik Creative Agency.</p>
+                <div class="lg:w-1/2 w-full flex justify-between">
+                    <img src="assets/img/logo-dark.png" alt="logo" class="h-[30px]">
+                    <img src="assets/img/sosmed.png" alt="sosmed" class="h-[30px]">
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="/node_modules/flowbite/dist/flowbite.js"></script>
+
+    <script>
+
+
+    </script>
+   
 </body>
 
 </html>

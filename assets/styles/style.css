@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input {
+    font-family: 'Inter';
+}
+
+#header .menu-navigation ul li a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #656464;
+}
+
+#header .menu-navigation ul li a.active{
+    font-weight: 600;
+    color: #2B2B39;
+}
+
+#header input:focus{
+    outline: none;
+}
+
+#hero {
+    padding-top: 150px;
+    padding-bottom: 82px;
+    background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
+}
+
+#why ul li{
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#why ul li::before{
+    content: " ";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(/src/icon/list-why-join.svg);
+    margin-right: 12px;
+    background-repeat: no-repeat;
+}
+
+#community{
+    background: linear-gradient(0deg, rgba(241, 246, 253, 0) 1.63%, #F1F6FD 20.5%, #F1F6FD 58.57%, #FFFFFF 100%);
+    padding-top: 60px;
+    padding-bottom: 126px;
+}
+
+#community .card{
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 45px;
+    background: white;
+    border-radius: 15px;
+}
+
+footer ul li{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 46px;
+    letter-spacing: 0.0125em;
+    color: #E7E7E7;
+}
